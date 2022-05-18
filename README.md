@@ -2,7 +2,8 @@
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for pic18f16q41-weather-station-cnano-mplab-mcc here
+# Weather Station with PIC18F16Q41, Curiosity Nano Base and Mikroe Click boards&trade;
+
 
 This is where the introduction to the example goes, including mentioning the peripherals used 
 
@@ -50,20 +51,20 @@ three Click sockets. The layout of Click boards is as follows:
 	
 	No additional wiring is required for this example.
 	
-	|	Signal						  |	Microcontroller Pin |
-	|---------------------------------|---------------------|
-	|  UART TX						  |	RB7					|
-	|  Weather Click – SDA (I2C)	  |	RB4					|
-	|  Weather Click – SCL (I2C)	  |	RB6					|
-	|  OLEDC Click – SDO (SPI)		  |	RC5					|
-	|  OLEDC Click - SDI (SPI)		  |	RC4					|
-	|  OLEDC Click – SCK (SPI)		  |	RC6					|
-	|  OLEDC Click – nCS (SPI)		  |	RC7					|
-	|  OLEDC Click – DC				  |	RC1					|
-	|  OLEDC Click – EN				  |	RA4					|
-	|  OLEDC Click – RST			  |	RA5					|
-	|  OLEDC Click – RW				  |	RC3					|
-	|  Ambient Click Output			  |	RC2					|
+|	Signal						  |	Microcontroller Pin |
+|---------------------------------|---------------------|
+|  UART TX						  |	RB7					|
+|  Weather Click – SDA (I2C)	  |	RB4					|
+|  Weather Click – SCL (I2C)	  |	RB6					|
+|  OLEDC Click – SDO (SPI)		  |	RC5					|
+|  OLEDC Click - SDI (SPI)		  |	RC4					|
+|  OLEDC Click – SCK (SPI)		  |	RC6					|
+|  OLEDC Click – nCS (SPI)		  |	RC7					|
+|  OLEDC Click – DC				  |	RC1					|
+|  OLEDC Click – EN				  |	RA4					|
+|  OLEDC Click – RST			  |	RA5					|
+|  OLEDC Click – RW				  |	RC3					|
+|  Ambient Click Output			  |	RC2					|
 	
 	
 	[![MCC Pin Manager Window View](images/pin_manager.png)]
@@ -79,7 +80,7 @@ to operate with a standard clock speed of 100 kHz, and since the Weather Click b
 were required on the SDA and SCL pins. The slave address of the BME280 weather sensor was the default address of 0x76. The temperature, 
 pressure, and humidity measurements were acquired from the Bosch BME280 weather sensor as raw uncompensated outputs.
 
-###BME280 Weather Sensor Compensation Routines:
+### BME280 Weather Sensor Compensation Routines:
 The I2C module was used in this example to read the temperature, pressure, and humidity from the BME280 sensor. The temperature and 
 pressure are read as 20-bit unsigned values, and the relative humidity is read as a 16-bit unsigned value. These sensor measurements obtained 
 using the I2C module are raw data measurements from the weather sensor, and compensation routines must be used to convert the raw sensor 
@@ -91,7 +92,7 @@ in accordance with the International Standard Atmosphere to take into account th
 with the ELEVATION macro in the bme280.h header file).
 The compensation routines are shown below.
 
-###Temperature Compensation Routines (°C):
+### Temperature Compensation Routines (°C):
 ```
 static uint32_t BME280_compensateTemperature(void) {
     long tempV1, tempV2, t;
@@ -103,7 +104,7 @@ static uint32_t BME280_compensateTemperature(void) {
 
     return t;
 ```
-###Atmospheric Pressure Compensation Routine (in Pascals):
+### Atmospheric Pressure Compensation Routine (in Pascals):
 ```
 static uint32_t BME280_compensatePressure(void) {
     long pressV1, pressV2;
@@ -137,7 +138,7 @@ static uint32_t BME280_compensatePressure(void) {
 }
 ```
 
-###Relative Humidity Compensation Routine (%):
+### Relative Humidity Compensation Routine (%):
 ```
 static uint32_t BME280_compensateHumidity(void) {
     long humV;
@@ -157,7 +158,7 @@ static uint32_t BME280_compensateHumidity(void) {
 }
 ```
 
-###ADCC Module Configuration:
+### ADCC Module Configuration:
 The ADCC was used in this code example to measure the output of the ambient light sensor. This peripheral was configured in Burst-Average mode 
 for this sensor interface, which allows the ADC to core independently perform a pre-determined burst of conversions while accumulating the 
 conversion results. In Burst-Average mode once the specified number of conversions have been completed, the accumulated sum of the conversion 
@@ -195,7 +196,7 @@ float AmbientCompensation(void) {
 }
 ```
 
-###SPI Module Configuration:
+### SPI Module Configuration:
 The SPI module was used in this code example to communicate with the OLEDC display to show the real-time weather station 
 output results. The OLEDC library in MCC was used to generate the initialization code and functional APIs needed to use 
 the display. The library sets up the SPI module with the correct configuration to ensure proper communication between 
@@ -206,7 +207,7 @@ add in the "oledC" library. The functional APIs provided by the oledC library in
 between the PIC and the display driver.
 
 
-###UART Module Configuration:
+### UART Module Configuration:
 The UART module was used in this code example as an alternative way of displaying the weather station output results by printing 
 the temperature, pressure, humidity, and ambient light intensity periodically using a serial port. The UART module was configured 
 using MCC in Asynchronous 8-bit mode with a baud rate of 9600 baud, with No Parity,  Transmission and reception were both enabled, and the 
@@ -214,7 +215,7 @@ using MCC in Asynchronous 8-bit mode with a baud rate of 9600 baud, with No Pari
 The UART TX pin was selected as pin RB7.
 
 
-###Weather Station Serial Port Output Results on MPLAB Data Visualizer:
+### Weather Station Serial Port Output Results on MPLAB Data Visualizer:
 [![MPLABX Data Visualizer Serial Terminal Output](images/DataVisualizerOutput.png)]
 
 Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used 
