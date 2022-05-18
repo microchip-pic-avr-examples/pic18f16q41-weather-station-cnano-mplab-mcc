@@ -5,13 +5,13 @@
 # Weather Station with PIC18F16Q41, Curiosity Nano Base and Mikroe Click boards&trade;
 
 
-This is where the introduction to the example goes, including mentioning the peripherals used 
+<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
 
 ## Related Documentation
 
 The “pic18f16q41-weather-station-cnano-mplab-mcc” project highlights the advanced communications peripherals found on the PIC18-Q41 
 family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. The I2C module 
-was used to interface a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and 
+was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and 
 atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an 
 analog ambient light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display 
 the weather station output values in real time, and the UART module was used to also display the weather station output values over 
@@ -19,24 +19,24 @@ a serial port in real time.
 
 ## Software Used
 
- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.50 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.32 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) 
+ <!-- All software used in this example must be listed here. Use unbreakable links! -->
+- MPLAB® X IDE 5.50 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® XC8 2.32 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
+- MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
+- MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
+- Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) 
 
-- MPLAB® X IDE 5.50.0 or newer [(MPLAB® X IDE 5.50)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
-- MPLAB® XC8 2.32.0 or newer compiler [(MPLAB® XC8 2.32)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+<!--  - MPLAB® X IDE 5.50.0 or newer [(MPLAB® X IDE 5.50)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github) 
+- MPLAB® XC8 2.32.0 or newer compiler [(MPLAB® XC8 2.32)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github) -->
 
 ## Hardware Used
 
-All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F16Q41 Curiosity Nano [(EV26Q64A)](https://www.microchip.com/Developmenttools/ProductDetails/EV26Q64A)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - OLED C Click board™ [(MIKROE-1585)](https://www.mikroe.com/oled-c-click) 
-	 - Weather Click board™ [(MIKROE-1978)](https://www.mikroe.com/weather-click)
-	 - Ambient Click board™ [(MIKROE-1890)](https://www.mikroe.com/ambient-click)
+<!-- All hardware used in this example must be listed here. Use unbreakable links! -->
+- PIC18F16Q41 Curiosity Nano [(EV26Q64A)](https://www.microchip.com/Developmenttools/ProductDetails/EV26Q64A)
+- Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
+- OLED C Click board™ [(MIKROE-1585)](https://www.mikroe.com/oled-c-click) 
+- Weather Click board™ [(MIKROE-1978)](https://www.mikroe.com/weather-click)
+- Ambient Click board™ [(MIKROE-1890)](https://www.mikroe.com/ambient-click)
 	 
 
 ## Setup
@@ -45,11 +45,11 @@ The Q41 Curiosity Nano Development Board (Part # EV26Q64A) was selected as the d
 implemented using the MikroElektronika OLEDC Click board (MIKROE-1585), the Bosch BME280 environmental sensor was provided using the MikroElektronika Weather Click 
 Board (MIKROE-1978), and the ambient light sensor was provided using the MikroElektronika Ambient Click Board (MIKROE-1890). The Curiosity Nano base board has 
 three Click sockets. The layout of Click boards is as follows:
-	- Socket 1: OLED C Click
-	- Socket 2: Weather Click
-	- Socket 3: Ambient Click
+- Socket 1: OLED C Click
+- Socket 2: Weather Click
+- Socket 3: Ambient Click
 	
-	No additional wiring is required for this example.
+No additional wiring is required for this example.
 	
 |	Signal						  |	Microcontroller Pin |
 |---------------------------------|---------------------|
@@ -67,8 +67,8 @@ three Click sockets. The layout of Click boards is as follows:
 |  Ambient Click Output			  |	RC2					|
 	
 	
-	[![MCC Pin Manager Window View](images/pin_manager.png)]
-	[![Curiosity Nano Project Setup](images/project_setup.png)]
+[![MCC Pin Manager Window View](images/pin_manager.png)]
+[![Curiosity Nano Project Setup](images/project_setup.png)]
 
  
 
@@ -171,13 +171,13 @@ the compensation routine used to convert the raw analog value to light intensity
 setup of the ADCC module for this sensor interface. The setup and configuration of the ADCC using MCC is shown in the figure below. The ADCC 
 was configured to perform 32 burst average conversions and then right shift them by 5 (divide by 32).
 
-###ADCC Burst-Average Mode MCC Configuration:
+### ADCC Burst-Average Mode MCC Configuration:
 [![MCC ADCC Window View](images/ADCC_MCC_setup.png)]
 
-###ADCC Computation Feature MCC Configuration:
+### ADCC Computation Feature MCC Configuration:
 [![MCC ADCC Computation View](images/ADCC_MCC_Computation.png)]
 
-###Ambient Light Sensor Acquisition & Compensation:
+### Ambient Light Sensor Acquisition & Compensation:
 ```
 float Ambient_ReadSensor(void) {
     ADPCH = AMBIENT; // Select AMBIENT analog channel as ADCC positive input;
@@ -218,7 +218,7 @@ The UART TX pin was selected as pin RB7.
 ### Weather Station Serial Port Output Results on MPLAB Data Visualizer:
 [![MPLABX Data Visualizer Serial Terminal Output](images/DataVisualizerOutput.png)]
 
-Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used 
+<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 
 ## Summary
 
