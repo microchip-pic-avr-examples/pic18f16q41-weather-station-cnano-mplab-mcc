@@ -1,46 +1,46 @@
-<!-- Please do not change this logo with link -->
+ <!-- Please do not change this logo with link -->
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
 # Update the title for pic18f16q41-weather-station-cnano-mplab-mcc here
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This is where the introduction to the example goes, including mentioning the peripherals used 
 
 ## Related Documentation
 
-<!-- The “pic18f16q41-weather-station-cnano-mplab-mcc” project highlights the advanced communications peripherals found on the PIC18-Q41 
+The “pic18f16q41-weather-station-cnano-mplab-mcc” project highlights the advanced communications peripherals found on the PIC18-Q41 
 family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. The I2C module 
 was used to interface a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and 
 atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an 
 analog ambient light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display 
 the weather station output values in real time, and the UART module was used to also display the weather station output values over 
-a serial port in real time. -->
+a serial port in real time. 
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
+ All software used in this example must be listed here. Use unbreakable links!
      - MPLAB® X IDE 5.50 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
      - MPLAB® XC8 2.32 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
      - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
      - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
+     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) 
 
 - MPLAB® X IDE 5.50.0 or newer [(MPLAB® X IDE 5.50)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
 - MPLAB® XC8 2.32.0 or newer compiler [(MPLAB® XC8 2.32)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
 
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
+All hardware used in this example must be listed here. Use unbreakable links!
      - PIC18F16Q41 Curiosity Nano [(EV26Q64A)](https://www.microchip.com/Developmenttools/ProductDetails/EV26Q64A)
      - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
      - OLED C Click board™ [(MIKROE-1585)](https://www.mikroe.com/oled-c-click) 
 	 - Weather Click board™ [(MIKROE-1978)](https://www.mikroe.com/weather-click)
 	 - Ambient Click board™ [(MIKROE-1890)](https://www.mikroe.com/ambient-click)
-	 -->
+	 
 
 ## Setup
 
-<!-- The Q41 Curiosity Nano Development Board (Part # EV26Q64A) was selected as the development platform for this code example. The weather station display was 
+The Q41 Curiosity Nano Development Board (Part # EV26Q64A) was selected as the development platform for this code example. The weather station display was 
 implemented using the MikroElektronika OLEDC Click board (MIKROE-1585), the Bosch BME280 environmental sensor was provided using the MikroElektronika Weather Click 
 Board (MIKROE-1978), and the ambient light sensor was provided using the MikroElektronika Ambient Click Board (MIKROE-1890). The Curiosity Nano base board has 
 three Click sockets. The layout of Click boards is as follows:
@@ -69,11 +69,11 @@ three Click sockets. The layout of Click boards is as follows:
 	[![MCC Pin Manager Window View](images/pin_manager.png)]
 	[![Curiosity Nano Project Setup](images/project_setup.png)]
 
- -->
+ 
 
 ## Operation
 
-<!-- The I2C module was used in this code example to communicate with the Bosch BME280 weather sensor to measure temperature, pressure, 
+The I2C module was used in this code example to communicate with the Bosch BME280 weather sensor to measure temperature, pressure, 
 and relative humidity. For this example, the I2C module was initialized using the MPLAB Code Configurator (MCC). The I2C was configured 
 to operate with a standard clock speed of 100 kHz, and since the Weather Click board incorporates pull-ups, no external pull-up resistors 
 were required on the SDA and SCL pins. The slave address of the BME280 weather sensor was the default address of 0x76. The temperature, 
@@ -196,16 +196,29 @@ float AmbientCompensation(void) {
 ```
 
 ###SPI Module Configuration:
+The SPI module was used in this code example to communicate with the OLEDC display to show the real-time weather station 
+output results. The OLEDC library in MCC was used to generate the initialization code and functional APIs needed to use 
+the display. The library sets up the SPI module with the correct configuration to ensure proper communication between 
+the PIC microcontroller and the display driver, and also provides a set of functional APIs that make getting started with 
+the display quick and easy. To add the OLEDC library to an MPLABX project, open MCC and navigate to the "Device Resources" 
+section. Once inside the Device Resources section, select the “Mikro-E Clicks” drop down menu, select “Displays”, and then 
+add in the "oledC" library. The functional APIs provided by the oledC library in MCC handle all of the SPI communication 
+between the PIC and the display driver.
 
 
 ###UART Module Configuration:
+The UART module was used in this code example as an alternative way of displaying the weather station output results by printing 
+the temperature, pressure, humidity, and ambient light intensity periodically using a serial port. The UART module was configured 
+using MCC in Asynchronous 8-bit mode with a baud rate of 9600 baud, with No Parity,  Transmission and reception were both enabled, and the 
+“Redirect STDIO to UART” checkbox was selected under the software settings tab to include the library required for “printf” functions. 
+The UART TX pin was selected as pin RB7.
 
 
 ###Weather Station Serial Port Output Results on MPLAB Data Visualizer:
+[![MPLABX Data Visualizer Serial Terminal Output](images/DataVisualizerOutput.png)]
 
-
-Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used 
 
 ## Summary
 
-<!-- Summarize what the example has shown -->
+This example shows how to create a weather station using the PIC18F16Q41 using Mikroe Click boards&trade;.
