@@ -1,14 +1,7 @@
-/*
- * File:   bme280.c
- * Author: C16783
- *
- * Created on May 13, 2020, 11:56 AM
- */
+
 
 #include "bme280.h"
 #include <math.h>
-
-#define ELEVATION 341    // define your locations elevation here
 
 /**
   Section: Driver APIs
@@ -102,11 +95,10 @@ float BME280_getTemperature(void) {
 }
 
 float BME280_getPressure(void) {
-    float pressure = (float) BME280_compensatePressure() / 1000;
-    pressure = pressure * 10.0;   // measured in hPa (equivalent to millibar)
-    
-    // Atmospheric pressure changes with elevation. 
-    // This finds the equivalent pressure at sea level to give accurate readings
+    float pressure = (float) BME280_compensatePressure() / 100; // measured in hPa (equivalent to millibar)
+ 
+    // Note: Atmospheric pressure changes with elevation. 
+    // The following code finds the equivalent pressure at sea level to give accurate readings
     // in accordance with the international Standard Atmosphere.
     // The equation is: P0 = P1 (1 - (0.0065h/ (T + 0.0065h + 273.15))^(-5.257)
     // where:   P0 = calculated mean sea level pressure (hPa)   

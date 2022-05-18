@@ -90,7 +90,7 @@ void PMD_Initialize(void)
     PMD3 = 0x00;
     // CLC3MD CLC3 enabled; CLC4MD CLC4 enabled; DMA1MD DMA1 enabled; DMA2MD DMA2 enabled; DMA3MD DMA3 enabled; CLC1MD CLC1 enabled; CLC2MD CLC2 enabled; 
     PMD4 = 0x00;
-    // DMA4MD DMA4 enabled; DAC2MD DAC2 enabled; 
+    // DMA4MD DMA4 enabled; OPAMD OPA enabled; DAC2MD DAC2 enabled; 
     PMD5 = 0x00;
 }
 

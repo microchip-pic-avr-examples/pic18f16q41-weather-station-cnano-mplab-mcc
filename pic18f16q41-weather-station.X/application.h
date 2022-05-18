@@ -28,7 +28,7 @@ extern "C" {
 
     void WeatherStation_initialize(void);
     void WeatherClick_readSensors(void);
-    void GetLightIntensity(void);
+    float GetLightIntensity(void);
     void WeatherStation_Print(void);
 
 #ifdef	__cplusplus

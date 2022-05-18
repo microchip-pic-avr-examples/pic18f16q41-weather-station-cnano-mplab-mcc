@@ -34,9 +34,10 @@ void WeatherClick_readSensors(void) {
     BME280_readMeasurements();
 }
 
-//void GetLightIntensity(void) {
-//    LightIntensity = AmbientCompensation();
-//}
+float GetLightIntensity(void) {
+    LightIntensity = AmbientCompensation();
+    return LightIntensity;
+}
 
 void WeatherStation_initialize(void) {
     BME280_reset();
@@ -58,23 +59,16 @@ void WeatherStation_Print(void) {
 
     WeatherClick_readSensors();
 
-    //temp_string = (int8_t) BME280_getTemperature();
     temp_string = BME280_getTemperature();
-    //press_string = (uint8_t) BME280_getPressure();
     press_string = BME280_getPressure();    // using float
     humid_string = (uint8_t) BME280_getHumidity();
-    //light_string = (uint8_t) AmbientCompensation();
-    light_string = (uint16_t) AmbientCompensation();
+    light_string = (uint16_t) GetLightIntensity();
 
-    //sprintf(str_temp, "      %i C", temp_string); // Temperature to String Conversion;
     sprintf(str_temp, "      %.1fC", temp_string); // Temperature to String Conversion;
-    //sprintf(str_press, "       %u inHg", press_string); // Pressure to String Conversion;
     sprintf(str_press, "       %u hPa", press_string); // Pressure to String Conversion;
     sprintf(str_hum, "          %u%%", humid_string); // Humidity to String Conversion;
-    //sprintf(str_light, "       %iuW/cm2", light_string); // Light to String Conversion;
     sprintf(str_light, "       %uuW/cm2", light_string); // Light to String Conversion;
 
-    //printf("Temperature: %i C \r\n", temp_string);
     printf("Temperature: %.1f°C \r\n", temp_string);
     printf("Pressure: %u hPa\r\n", press_string);
     printf("Relative Humidity: %u%% \r\n", humid_string);

@@ -1,9 +1,4 @@
-/* 
- * File:   bme280.h
- * Author: C16783
- *
- * Created on May 13, 2020, 11:56 AM
- */
+
 
 #ifndef BME280_H
 #define	BME280_H
@@ -18,7 +13,10 @@ extern "C" {
     /**
   Section: Macro Declarations
      */
-
+    
+     // define the elevation at your location here
+#define ELEVATION 341    
+    
     // Device Information
 #define BME280_ADDR     			0x76
 #define BME280_CHIP_ID  			0x60
