@@ -68,6 +68,7 @@ No additional wiring is required for this example.
 	
 	
 ![MCC Pin Manager Window View](images/pin_manager.png)
+<br> <br>
 ![Curiosity Nano Project Setup](images/project_setup.jpg)
 
  
