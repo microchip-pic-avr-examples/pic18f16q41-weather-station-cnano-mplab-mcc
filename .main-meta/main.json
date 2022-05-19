@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f16q41-weather-station-cnano-mplab-mcc",
-        "version": " ",
+        "version": "1.0.0",
         "displayName": "PIC18F16Q41-Weather-Station-CNano-MPLAB-MCC",
         "projectName": "pic18f16q41-weather-station-cnano-mplab-mcc",
         "shortDescription": "This example is a weather station using Weather Click, Ambient Click, and OLED Click with PIC18F16Q41 Curiosity Nano and Curiosity Nano Base for Click boards&trade;",
