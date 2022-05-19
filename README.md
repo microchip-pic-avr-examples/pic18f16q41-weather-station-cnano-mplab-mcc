@@ -68,7 +68,7 @@ No additional wiring is required for this example.
 	
 	
 [![MCC Pin Manager Window View](images/pin_manager.png)]
-[![Curiosity Nano Project Setup](images/project_setup.png)]
+[![Curiosity Nano Project Setup](images/project_setup.jpg)]
 
  
 
@@ -173,6 +173,8 @@ was configured to perform 32 burst average conversions and then right shift them
 
 ### ADCC Burst-Average Mode MCC Configuration:
 [![MCC ADCC Window View](images/ADCC_MCC_setup.png)]
+
+
 
 ### ADCC Computation Feature MCC Configuration:
 [![MCC ADCC Computation View](images/ADCC_MCC_Computation.png)]
