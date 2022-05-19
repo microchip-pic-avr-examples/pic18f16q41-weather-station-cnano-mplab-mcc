@@ -18,12 +18,9 @@ extern "C" {
 #include "bme280.h"
 
 
-    //int8_t temp_string; // Temperature
     float temp_string; // Temperature
-    //uint8_t press_string; // Pressure
     uint16_t press_string; // Pressure
     uint8_t humid_string; // Humidity
-    //uint8_t light_string; // Ambient Light
     uint16_t light_string; // Ambient Light
 
     void WeatherStation_initialize(void);
