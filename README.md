@@ -9,13 +9,13 @@
 
 ## Related Documentation
 
-The “pic18f16q41-weather-station-cnano-mplab-mcc” project highlights the advanced communications peripherals found on the PIC18-Q41 
-family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. The I2C module 
-was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and 
-atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an 
-analog ambient light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display 
-the weather station output values in real time, and the UART module was used to also display the weather station output values over 
-a serial port in real time. 
+The “pic18f16q41-weather-station-cnano-mplab-mcc” project highlights the advanced communications peripherals found on the PIC18-Q41
+family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. The I2C module
+was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and
+atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an
+analog ambient light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display
+the weather station output values in real time, and the UART module was used to also display the weather station output values over
+a serial port in real time.
 
 ## Software Used
 
@@ -24,9 +24,9 @@ a serial port in real time.
 - MPLAB® XC8 2.32 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
 - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
 - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-- Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) 
+- Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
 
-<!--  - MPLAB® X IDE 5.50.0 or newer [(MPLAB® X IDE 5.50)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github) 
+<!--  - MPLAB® X IDE 5.50.0 or newer [(MPLAB® X IDE 5.50)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
 - MPLAB® XC8 2.32.0 or newer compiler [(MPLAB® XC8 2.32)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github) -->
 
 ## Hardware Used
@@ -34,23 +34,23 @@ a serial port in real time.
 <!-- All hardware used in this example must be listed here. Use unbreakable links! -->
 - PIC18F16Q41 Curiosity Nano [(EV26Q64A)](https://www.microchip.com/Developmenttools/ProductDetails/EV26Q64A)
 - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-- OLED C Click board™ [(MIKROE-1585)](https://www.mikroe.com/oled-c-click) 
+- OLED C Click board™ [(MIKROE-1585)](https://www.mikroe.com/oled-c-click)
 - Weather Click board™ [(MIKROE-1978)](https://www.mikroe.com/weather-click)
 - Ambient Click board™ [(MIKROE-1890)](https://www.mikroe.com/ambient-click)
-	 
+
 
 ## Setup
 
-The Q41 Curiosity Nano Development Board (Part # EV26Q64A) was selected as the development platform for this code example. The weather station display was 
-implemented using the MikroElektronika OLEDC Click board (MIKROE-1585), the Bosch BME280 environmental sensor was provided using the MikroElektronika Weather Click 
-Board (MIKROE-1978), and the ambient light sensor was provided using the MikroElektronika Ambient Click Board (MIKROE-1890). The Curiosity Nano base board has 
+The Q41 Curiosity Nano Development Board (Part # EV26Q64A) was selected as the development platform for this code example. The weather station display was
+implemented using the MikroElektronika OLEDC Click board (MIKROE-1585), the Bosch BME280 environmental sensor was provided using the MikroElektronika Weather Click
+Board (MIKROE-1978), and the ambient light sensor was provided using the MikroElektronika Ambient Click Board (MIKROE-1890). The Curiosity Nano base board has
 three Click sockets. The layout of Click boards is as follows:
 - Socket 1: OLED C Click
 - Socket 2: Weather Click
 - Socket 3: Ambient Click
-	
+
 No additional wiring is required for this example.
-	
+
 |	Signal						  |	Microcontroller Pin |
 |---------------------------------|---------------------|
 |  UART TX						  |	RB7					|
@@ -65,31 +65,31 @@ No additional wiring is required for this example.
 |  OLEDC Click – RST			  |	RA5					|
 |  OLEDC Click – RW				  |	RC3					|
 |  Ambient Click Output			  |	RC2					|
-	
-	
+
+
 ![MCC Pin Manager Window View](images/pin_manager.png)
 <br> <br>
 ![Curiosity Nano Project Setup](images/project_setup.jpg)
 
- 
+
 
 ## Operation
 
-The I2C module was used in this code example to communicate with the Bosch BME280 weather sensor to measure temperature, pressure, 
-and relative humidity. For this example, the I2C module was initialized using the MPLAB Code Configurator (MCC). The I2C was configured 
-to operate with a standard clock speed of 100 kHz, and since the Weather Click board incorporates pull-ups, no external pull-up resistors 
-were required on the SDA and SCL pins. The slave address of the BME280 weather sensor was the default address of 0x76. The temperature, 
+The I2C module was used in this code example to communicate with the Bosch BME280 weather sensor to measure temperature, pressure,
+and relative humidity. For this example, the I2C module was initialized using the MPLAB Code Configurator (MCC). The I2C was configured
+to operate with a standard clock speed of 100 kHz, and since the Weather Click board incorporates pull-ups, no external pull-up resistors
+were required on the SDA and SCL pins. The slave address of the BME280 weather sensor was the default address of 0x76. The temperature,
 pressure, and humidity measurements were acquired from the Bosch BME280 weather sensor as raw uncompensated outputs.
 
 ### BME280 Weather Sensor Compensation Routines:
-The I2C module was used in this example to read the temperature, pressure, and humidity from the BME280 sensor. The temperature and 
-pressure are read as 20-bit unsigned values, and the relative humidity is read as a 16-bit unsigned value. These sensor measurements obtained 
-using the I2C module are raw data measurements from the weather sensor, and compensation routines must be used to convert the raw sensor 
-outputs to values that can be used for display. The BME280 weather sensor has a set of compensation parameters stored in the device memory 
-that must be read and stored by the PIC microcontroller. These compensation parameters are all used in the conversion routines to properly 
-convert the raw sensor output to the final output results. The compensation routines are used to convert the BME280 raw outputs to temperature 
-in degrees Celsius, atmospheric pressure in hectopascals (equivalent to millibar), and relative humidity. The atmospheric pressure is adjusted 
-in accordance with the International Standard Atmosphere to take into account the elevation at the user's location (set manually by the user 
+The I2C module was used in this example to read the temperature, pressure, and humidity from the BME280 sensor. The temperature and
+pressure are read as 20-bit unsigned values, and the relative humidity is read as a 16-bit unsigned value. These sensor measurements obtained
+using the I2C module are raw data measurements from the weather sensor, and compensation routines must be used to convert the raw sensor
+outputs to values that can be used for display. The BME280 weather sensor has a set of compensation parameters stored in the device memory
+that must be read and stored by the PIC microcontroller. These compensation parameters are all used in the conversion routines to properly
+convert the raw sensor output to the final output results. The compensation routines are used to convert the BME280 raw outputs to temperature
+in degrees Celsius, atmospheric pressure in hectopascals (equivalent to millibar), and relative humidity. The atmospheric pressure is adjusted
+in accordance with the International Standard Atmosphere to take into account the elevation at the user's location (set manually by the user
 with the ELEVATION macro in the bme280.h header file).
 The compensation routines are shown below.
 
@@ -160,20 +160,21 @@ static uint32_t BME280_compensateHumidity(void) {
 ```
 
 ### ADCC Module Configuration:
-The ADCC was used in this code example to measure the output of the ambient light sensor. This peripheral was configured in Burst-Average mode 
-for this sensor interface, which allows the ADC to core independently perform a pre-determined burst of conversions while accumulating the 
-conversion results. In Burst-Average mode once the specified number of conversions have been completed, the accumulated sum of the conversion 
-results is then right shifted (or divided) by the specified number of bits core independently. The purpose of this hardware feature is to allow 
+The ADCC was used in this code example to measure the output of the ambient light sensor. This peripheral was configured in Burst-Average mode
+for this sensor interface, which allows the ADC to core independently perform a pre-determined burst of conversions while accumulating the
+conversion results. In Burst-Average mode once the specified number of conversions have been completed, the accumulated sum of the conversion
+results is then right shifted (or divided) by the specified number of bits core independently. The purpose of this hardware feature is to allow
 the ADC to perform averaging without any software intervention. The right shifted result can be read from the ADFLTR register.
 
-The ADC conversion result was then used to calculate the ambient light intensity in µW/cm2 using the characteristic curve provided in the sensor 
-datasheet. The following code snippet shows the firmware used to perform the burst-average conversion on the ambient light sensor output, and 
-the compensation routine used to convert the raw analog value to light intensity. The MPLAB Code Configurator was used to quickly and easily 
-setup of the ADCC module for this sensor interface. The setup and configuration of the ADCC using MCC is shown in the figure below. The ADCC 
+The ADC conversion result was then used to calculate the ambient light intensity in µW/cm2 using the characteristic curve provided in the sensor
+datasheet. The following code snippet shows the firmware used to perform the burst-average conversion on the ambient light sensor output, and
+the compensation routine used to convert the raw analog value to light intensity. The MPLAB Code Configurator was used to quickly and easily
+setup of the ADCC module for this sensor interface. The setup and configuration of the ADCC using MCC is shown in the figure below. The ADCC
 was configured to perform 32 burst average conversions and then right shift them by 5 (divide by 32).
 
 ### ADCC Burst-Average Mode MCC Configuration:
-![MCC ADCC Window View](images/ADCC_MCC_setup.png)
+![MCC ADCC Window View](images/ADCC_MCC_setup.png)  
+<br> <br>
 
 
 
@@ -200,21 +201,21 @@ float AmbientCompensation(void) {
 ```
 
 ### SPI Module Configuration:
-The SPI module was used in this code example to communicate with the OLEDC display to show the real-time weather station 
-output results. The OLEDC library in MCC was used to generate the initialization code and functional APIs needed to use 
-the display. The library sets up the SPI module with the correct configuration to ensure proper communication between 
-the PIC microcontroller and the display driver, and also provides a set of functional APIs that make getting started with 
-the display quick and easy. To add the OLEDC library to an MPLABX project, open MCC and navigate to the "Device Resources" 
-section. Once inside the Device Resources section, select the “Mikro-E Clicks” drop down menu, select “Displays”, and then 
-add in the "oledC" library. The functional APIs provided by the oledC library in MCC handle all of the SPI communication 
+The SPI module was used in this code example to communicate with the OLEDC display to show the real-time weather station
+output results. The OLEDC library in MCC was used to generate the initialization code and functional APIs needed to use
+the display. The library sets up the SPI module with the correct configuration to ensure proper communication between
+the PIC microcontroller and the display driver, and also provides a set of functional APIs that make getting started with
+the display quick and easy. To add the OLEDC library to an MPLABX project, open MCC and navigate to the "Device Resources"
+section. Once inside the Device Resources section, select the “Mikro-E Clicks” drop down menu, select “Displays”, and then
+add in the "oledC" library. The functional APIs provided by the oledC library in MCC handle all of the SPI communication
 between the PIC and the display driver.
 
 
 ### UART Module Configuration:
-The UART module was used in this code example as an alternative way of displaying the weather station output results by printing 
-the temperature, pressure, humidity, and ambient light intensity periodically using a serial port. The UART module was configured 
-using MCC in Asynchronous 8-bit mode with a baud rate of 9600 baud, with No Parity,  Transmission and reception were both enabled, and the 
-“Redirect STDIO to UART” checkbox was selected under the software settings tab to include the library required for “printf” functions. 
+The UART module was used in this code example as an alternative way of displaying the weather station output results by printing
+the temperature, pressure, humidity, and ambient light intensity periodically using a serial port. The UART module was configured
+using MCC in Asynchronous 8-bit mode with a baud rate of 9600 baud, with No Parity,  Transmission and reception were both enabled, and the
+“Redirect STDIO to UART” checkbox was selected under the software settings tab to include the library required for “printf” functions.
 The UART TX pin was selected as pin RB7.
 
 
