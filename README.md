@@ -67,8 +67,8 @@ No additional wiring is required for this example.
 |  Ambient Click Output			  |	RC2					|
 	
 	
-[![MCC Pin Manager Window View](images/pin_manager.png)]
-[![Curiosity Nano Project Setup](images/project_setup.jpg)]
+![MCC Pin Manager Window View](images/pin_manager.png)
+![Curiosity Nano Project Setup](images/project_setup.jpg)
 
  
 
@@ -172,12 +172,12 @@ setup of the ADCC module for this sensor interface. The setup and configuration 
 was configured to perform 32 burst average conversions and then right shift them by 5 (divide by 32).
 
 ### ADCC Burst-Average Mode MCC Configuration:
-[![MCC ADCC Window View](images/ADCC_MCC_setup.png)]
+![MCC ADCC Window View](images/ADCC_MCC_setup.png)
 
 
 
 ### ADCC Computation Feature MCC Configuration:
-[![MCC ADCC Computation View](images/ADCC_MCC_Computation.png)]
+![MCC ADCC Computation View](images/ADCC_MCC_Computation.png)
 
 ### Ambient Light Sensor Acquisition & Compensation:
 ```
@@ -218,7 +218,7 @@ The UART TX pin was selected as pin RB7.
 
 
 ### Weather Station Serial Port Output Results on MPLAB Data Visualizer:
-[![MPLABX Data Visualizer Serial Terminal Output](images/DataVisualizerOutput.png)]
+![MPLABX Data Visualizer Serial Terminal Output](images/DataVisualizerOutput.png)
 
 <!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 
