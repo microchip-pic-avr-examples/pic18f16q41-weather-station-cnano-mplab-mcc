@@ -4,15 +4,21 @@
 
 # Weather Station with PIC18F16Q41, Curiosity Nano Base and Mikroe Click boards&trade;
 
-This project is based on the "pic18f16q40-weather-station" which used a Low Pin Count (LPC) variant of the PIC18F16Q40, LPC Baseboard (with 1 MikroE Click socket), and breadboarded the other two MikroE Click boards. This port of that project enables the use of a Curiosity Nano Development board, with a Curiosity Nano Base board, which allows all three MikroE Click boards to be positioned on the base board.
+This project is based on the "pic18f16q40-weather-station" which used a Low Pin Count (LPC) variant of the PIC18F16Q40, LPC Baseboard (with 1 MikroE Click socket), 
+and breadboarded the other two MikroE Click boards. This port of that project enables the use of a Curiosity Nano Development board, with a Curiosity Nano Base board,
+ which allows all three MikroE Click boards to be positioned on the base board. This project highlights the advanced communications peripherals found on the PIC18-Q41
+family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. 
+The I2C module was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and 
+atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an analog ambient 
+light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display the weather station output values 
+in real time, and the UART module was used to also display the weather station output values over
+a serial port in real time.
 
 
 
 ## Related Documentation
 
-This project highlights the advanced communications peripherals found on the PIC18-Q41
-family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. The I2C module was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an analog ambient light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display the weather station output values in real time, and the UART module was used to also display the weather station output values over
-a serial port in real time. The original project this was ported from can be found at the following link:
+ The original project this was ported from can be found at the following link:
 <https://github.com/microchip-pic-avr-examples/pic18f16q40-weather-station>
 
 ## Software Used
