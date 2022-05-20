@@ -4,20 +4,16 @@
 
 # Weather Station with PIC18F16Q41, Curiosity Nano Base and Mikroe Click boards&trade;
 
-This project is based on the "pic18f16q40-weather-station" which used a Low Pin Count (LPC) variant of the PIC18F16Q40, LPC Baseboard (with 1 MikroE Click socket), and breadboarded the other two MikroE Click boards. This port of that project enables the use of a Curiosity Nano Development board, with a Curiosity Nano Base board, which allows all three MikroE Click boards to all be positioned on the base board.
-The original project can be found at the following link:
-<https://github.com/microchip-pic-avr-examples/pic18f16q40-weather-station>
+This project is based on the "pic18f16q40-weather-station" which used a Low Pin Count (LPC) variant of the PIC18F16Q40, LPC Baseboard (with 1 MikroE Click socket), and breadboarded the other two MikroE Click boards. This port of that project enables the use of a Curiosity Nano Development board, with a Curiosity Nano Base board, which allows all three MikroE Click boards to be positioned on the base board.
+
 
 
 ## Related Documentation
 
 This project highlights the advanced communications peripherals found on the PIC18-Q41
-family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. The I2C module
-was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and
-atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an
-analog ambient light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display
-the weather station output values in real time, and the UART module was used to also display the weather station output values over
-a serial port in real time.
+family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. The I2C module was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an analog ambient light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display the weather station output values in real time, and the UART module was used to also display the weather station output values over
+a serial port in real time. The original project this was ported from can be found at the following link:
+<https://github.com/microchip-pic-avr-examples/pic18f16q40-weather-station>
 
 ## Software Used
 
@@ -39,10 +35,7 @@ a serial port in real time.
 
 ## Setup
 
-The Q41 Curiosity Nano Development Board [(Part # EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A) was selected as the development platform for this code example. The weather station display was
-implemented using the MikroElektronika OLEDC Click board (MIKROE-1585), the Bosch BME280 environmental sensor was provided using the MikroElektronika Weather Click
-Board (MIKROE-1978), and the ambient light sensor was provided using the MikroElektronika Ambient Click Board (MIKROE-1890). The Curiosity Nano base board has
-three Click sockets. The layout of Click boards is as follows:
+The Q41 Curiosity Nano Development Board [(Part # EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A) was selected as the development platform for this code example. The weather station display was implemented using the MikroElektronika OLEDC Click board (MIKROE-1585), the Bosch BME280 environmental sensor was provided using the MikroElektronika Weather Click Board (MIKROE-1978), and the ambient light sensor was provided using the MikroElektronika Ambient Click Board (MIKROE-1890). The Curiosity Nano base board has three Click sockets. The layout of Click boards is as follows:
 - Socket 1: OLED C Click
 - Socket 2: Weather Click
 - Socket 3: Ambient Click
@@ -64,6 +57,8 @@ No additional wiring is required for this example.
 |  OLEDC Click – RW				  |	RC3					|
 |  Ambient Click Output			  |	RC2					|
 
+Be aware, that the Q41 Curiosity Nano will generate an associated UART Rx when the UART Tx is created. The user must ensure the Rx pin generated is not used as an I/O to avoid unexpected behavior.
+<br> <br>
 To use a serial terminal with this project, set it to 9600 baud, no parity, 1 stop bit.
 
 
