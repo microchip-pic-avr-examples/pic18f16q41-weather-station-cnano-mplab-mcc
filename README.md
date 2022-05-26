@@ -229,4 +229,4 @@ The UART TX pin was selected as pin RB7.
 
 ## Summary
 
-This example shows how to create a weather station using the PIC18F16Q41 using Mikroe Click boards.
+This example shows how to create a weather station using the PIC18F16Q41 using MikroE Click boards.
