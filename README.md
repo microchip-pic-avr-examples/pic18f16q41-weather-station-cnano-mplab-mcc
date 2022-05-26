@@ -25,7 +25,7 @@ a serial port in real time.
 
 - [MPLAB® X IDE 5.50 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
 - [MPLAB XC8 2.32 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
-- [MPLAB Code Configurator (MCC) 3.95.0](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+- [MPLAB Code Configurator (MCC) 4.85.1](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
 - [MPLAB Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
 - [Microchip PIC18F-Q Series Device Support (1.4.109) or newer](https://packs.download.microchip.com/)
 
