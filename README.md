@@ -2,16 +2,16 @@
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Weather Station with PIC18F16Q41, Curiosity Nano Base and Mikroe Click boards&trade;
+# Weather Station with PIC18F16Q41, Curiosity Nano Base and MikroE Click boards&trade;
 
-This project is based on the "pic18f16q40-weather-station" which used a Low Pin Count (LPC) variant of the PIC18F16Q40, LPC Baseboard (with 1 MikroE Click socket), 
-and breadboarded the other two MikroE Click boards. This port of that project enables the use of a Curiosity Nano Development board, with a Curiosity Nano Base board,
- which allows all three MikroE Click boards to be positioned on the base board. This project highlights the advanced communications peripherals found on the PIC18-Q41
-family of devices to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform. 
-The I2C module was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and 
-atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an analog ambient 
-light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display the weather station output values 
-in real time, and the UART module was used to also display the weather station output values over
+This project is based on the "pic18f16q40-weather-station" which used a Low Pin Count (LPC) variant of the PIC18F16Q40, LPC Baseboard (with 1 MikroE Click socket),
+and breadboarded the other two MikroE Click boards&trade;. This port of that project enables the use of a Curiosity Nano Development board, with a Curiosity Nano Base board,
+ which allows all three MikroE Click boards to be positioned on the base board. This project highlights the advanced communications peripherals found on the PIC18F16Q41
+family of microcontrollers to create a PIC18 powered weather station, all with Microchip’s easy to use Curiosity Nano platform.
+The I2C module was used to interface with a Bosch BME280 Weather Sensor to provide real-time measurements for temperature, relative humidity, and
+atmospheric pressure. This project also implements the 12-bit Analog to Digital Converter with Computation (ADCC) to interface an analog ambient
+light sensor which was used to measure light intensity. The SPI module was used to drive an OLED display to display the weather station output values
+in real time, and the UART module was used to send the weather station output values over
 a serial port in real time.
 
 
@@ -23,25 +23,25 @@ a serial port in real time.
 
 ## Software Used
 
-- MPLAB® X IDE 5.50 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-- MPLAB® XC8 2.32 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-- MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-- MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-- Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
+- [MPLAB® X IDE 5.50 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+- [MPLAB XC8 2.32 or newer](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+- [MPLAB Code Configurator (MCC) 3.95.0](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+- [MPLAB Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+- [Microchip PIC18F-Q Series Device Support (1.4.109) or newer](https://packs.download.microchip.com/)
 
 
 ## Hardware Used
 
-- PIC18F16Q41 Curiosity Nano [(EV26Q64A)](https://www.microchip.com/Developmenttools/ProductDetails/EV26Q64A)
-- Curiosity Nano Base for Click boards [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-- OLED C Click board [(MIKROE-1585)](https://www.mikroe.com/oled-c-click)
-- Weather Click board [(MIKROE-1978)](https://www.mikroe.com/weather-click)
-- Ambient Click board [(MIKROE-1890)](https://www.mikroe.com/ambient-click)
+- [PIC18F16Q41 Curiosity Nano Evaluation Kit (EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+- [Curiosity Nano Base for Click boards (AC164162)](https://www.microchip.com/en-us/development-tool/AC164162?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github)
+- [OLED C Click board (MIKROE-1585)](https://www.mikroe.com/oled-c-click)
+- [Weather Click board (MIKROE-1978)](https://www.mikroe.com/weather-click)
+- [Ambient Click board (MIKROE-1890)](https://www.mikroe.com/ambient-click)
 
 
 ## Setup
 
-The Q41 Curiosity Nano Development Board [(Part # EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A) was selected as the development platform for this code example. The weather station display was implemented using the MikroElektronika OLEDC Click board (MIKROE-1585), the Bosch BME280 environmental sensor was provided using the MikroElektronika Weather Click Board (MIKROE-1978), and the ambient light sensor was provided using the MikroElektronika Ambient Click Board (MIKROE-1890). The Curiosity Nano base board has three Click sockets. The layout of Click boards is as follows:
+The PIC18F16Q41 Curiosity Nano Evaluation Kit [(Part # EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-weather-station-cnano-mplab-mcc-github) was selected as the development platform for this code example. The weather station display was implemented using the MikroElektronika [OLEDC Click board (MIKROE-1585)](https://www.mikroe.com/oled-c-click), the Bosch BME280 environmental sensor was provided using the [Weather Click Board (MIKROE-1978)](https://www.mikroe.com/weather-click), and the ambient light sensor was provided using the [Ambient Click Board (MIKROE-1890)](https://www.mikroe.com/ambient-click). The Curiosity Nano base board has three Click sockets. The layout of Click boards is as follows:
 - Socket 1: OLED C Click
 - Socket 2: Weather Click
 - Socket 3: Ambient Click
@@ -94,8 +94,10 @@ in accordance with the International Standard Atmosphere to take into account th
 with the ELEVATION macro in the bme280.h header file).
 The compensation routines are shown below.
 
-### Temperature Compensation Routines (°C):
-These compensation routines were obtained from the Bosch BME280 datasheet.
+These compensation routines were obtained from the [Bosch BME280 datasheet](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/).
+
+
+### Temperature Compensation Routines (°C):  
 ```
 static uint32_t BME280_compensateTemperature(void) {
     long tempV1, tempV2, t;
@@ -170,7 +172,7 @@ the ADC to perform averaging without any software intervention. The right shifte
 
 The ADC conversion result was then used to calculate the ambient light intensity in µW/cm2 using the characteristic curve provided in the sensor
 datasheet. The following code snippet shows the firmware used to perform the burst-average conversion on the ambient light sensor output, and
-the compensation routine used to convert the raw analog value to light intensity. The MPLAB Code Configurator was used to quickly and easily
+the compensation routine used to convert the raw analog value to light intensity. MPLAB Code Configurator was used to quickly and easily
 setup the ADCC module for this sensor interface. The setup and configuration of the ADCC using MCC is shown in the figure below. The ADCC
 was configured to perform 32 burst average conversions and then right shift them by 5 (divide by 32).
 
