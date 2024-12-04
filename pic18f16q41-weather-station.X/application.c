@@ -69,7 +69,7 @@ void WeatherStation_Print(void) {
     sprintf(str_hum, "          %u%%", humid_string); // Humidity to String Conversion;
     sprintf(str_light, "       %uuW/cm2", light_string); // Light to String Conversion;
 
-    printf("Temperature: %.1f°C \r\n", temp_string);
+    printf("Temperature: %.1f C \r\n", temp_string);
     printf("Pressure: %u hPa\r\n", press_string);
     printf("Relative Humidity: %u%% \r\n", humid_string);
     printf("Light Intensity: %u (uW/cm2) \r\n\n", light_string);

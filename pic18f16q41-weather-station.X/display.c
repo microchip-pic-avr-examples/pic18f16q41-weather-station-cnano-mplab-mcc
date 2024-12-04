@@ -147,14 +147,14 @@ void display_PrintWeatherString(void) {
         weatherInitialized = true;
 }
 
-display_eraseValues(void) {
+void display_eraseValues(void) {
     oledC_eraseShape(8, background_color);
     oledC_eraseShape(9, background_color);
     oledC_eraseShape(10, background_color);
     oledC_eraseShape(11, background_color);
 }
 
-display_Print_Splash(void) {
+void display_Print_Splash(void) {
     if (!splashInitialized) {
         //printf("Display not yet initialised!\nDisplaying splash screen\n\n");
         display_Splash();
@@ -163,7 +163,7 @@ display_Print_Splash(void) {
     display_clearScreen(); // Clear Screen;
 }
 
-display_Print_Weather(void) {
+void display_Print_Weather(void) {
     if (!weatherInitialized) {
         display_setBackground(OLEDC_COLOR_BLACK);
         display_PrintLabels();

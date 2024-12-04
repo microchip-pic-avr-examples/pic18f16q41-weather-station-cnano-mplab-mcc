@@ -59,9 +59,9 @@ extern "C" {
     void display_Splash(void);
     void display_PrintLabels(void);
     void display_PrintWeatherString(void);
-    display_eraseValues(void);
-    display_Print_Splash(void);
-    oledC_Print_Weather(void);
+    void display_eraseValues(void);
+    void display_Print_Splash(void);
+    void display_Print_Weather(void);
 
 #ifdef	__cplusplus
 }
